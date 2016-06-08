@@ -5,12 +5,6 @@ description: |
   Kodi® (formerly known as XBMC™) is an award-winning free and open source (GPL) software media center for playing videos, music, pictures, games, and more. Kodi runs on Linux, OS X, Windows, iOS, and Android, featuring a 10-foot user interface for use with televisions and remote controls. It allows users to play and view most videos, music, podcasts, and other digital media files from local and network storage media and the internet.
 confinement: devmode
 
-apps:
-  kodi:
-    command: 
-    daemon: 
-    plugs: [network, home, network-bind]
-
 parts:
   kodi:
     plugin: autotools
@@ -32,7 +26,9 @@ parts:
       - gettext
       - git-core
       - gperf
+      - libcurl3
       - nasm
+      - pkg-config
       - pmount
       - python-dev
       - python-imaging
@@ -58,7 +54,7 @@ parts:
       - libcap-dev
       - libcdio-dev
       - libcec-dev
-      - libcec1
+#      - libcec1
       - libcrystalhd-dev
       - libcrystalhd3
       - libcurl3
@@ -68,7 +64,7 @@ parts:
       - libdbus-1-dev
       - libenca-dev
       - libflac-dev
-      - libfontconfig-dev
+#      - libfontconfig-dev
       - libfreetype6-dev
       - libfribidi-dev
       - libglew-dev
@@ -88,11 +84,11 @@ parts:
       - libogg-dev
       - libpcre3-dev
       - libplist-dev
-      - libpng-dev
+ #     - libpng-dev
       - libpostproc-dev
       - libpulse-dev
-      - libsamplerate-dev
-      - libsdl-dev
+ #     - libsamplerate-dev
+ #     - libsdl-dev
       - libsdl-gfx1.2-dev
       - libsdl-image1.2-dev
       - libsdl-mixer1.2-dev
@@ -102,7 +98,7 @@ parts:
       - libssh-dev
       - libssl-dev
       - libswscale-dev
-      - libtiff-dev
+ #     - libtiff-dev
       - libtinyxml-dev
       - libtool
       - libudev-dev
@@ -120,4 +116,3 @@ parts:
       - libxt-dev
       - libyajl-dev
       - mesa-utils
-
