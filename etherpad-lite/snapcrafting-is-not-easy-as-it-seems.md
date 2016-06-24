@@ -82,6 +82,18 @@ total 4
 drwxrwxr-x 9 etherpad-lite etherpad-lite 4096 Jun 20 21:34 etherpad-lite
 ````
 
+````bash
+$ ls -lrt parts/etherpad-lite/
+total 28
+drwxrwxr-x 5 etherpad-lite etherpad-lite 4096 Jun 20 21:33 ubuntu
+drwxrwxr-x 2 etherpad-lite etherpad-lite 4096 Jun 20 21:33 bin
+drwxrwxr-x 8 etherpad-lite etherpad-lite 4096 Jun 20 21:33 src
+drwxrwxr-x 8 etherpad-lite etherpad-lite 4096 Jun 20 21:33 build
+drwxrwxr-x 2 etherpad-lite etherpad-lite 4096 Jun 20 21:33 npm
+drwxr-xr-x 9 etherpad-lite etherpad-lite 4096 Jun 20 21:34 install
+drwxrwxr-x 2 etherpad-lite etherpad-lite 4096 Jun 20 21:34 state
+````
+
 
 
 [1]: https://github.com/ether/etherpad-lite#gnulinux-and-other-unix-like-systems
