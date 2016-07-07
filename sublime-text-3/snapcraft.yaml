@@ -1,0 +1,24 @@
+name: sublime-text-3
+version: build-3114
+summary: Sublime Text is a sophisticated text editor for code, markup and prose.
+description: |
+  Sublime Text is a sophisticated text editor for code, markup and prose.
+  You'll love the slick user interface, extraordinary features and amazing performance.
+  Sublime Text 3 is currently in beta.
+
+confinement: devmode  # use "strict" to enforce system access only via declared interfaces
+
+apps:
+  sublime-text-3:
+    command: desktop-launch $SNAP/sublime_text
+    plugs: [X11, network, network-bind, home]
+
+parts:
+  sublime-text-3:
+    after: [desktop/qt5]
+    source: https://download.sublimetext.com/sublime_text_3_build_3114_x64.tar.bz2
+    source-type: tar
+    plugin: copy
+    files:
+      "*": "./"
+
